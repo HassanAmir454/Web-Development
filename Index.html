@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hassan-Developer portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(18, 18, 70);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(41, 41, 167);
+            height: 80px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+
+        }
+
+        nav ul li a:hover {
+            color: rgb(178, 104, 247);
+            font-size: 1.03rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .FristSection {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 50px 0px;
+        }
+
+        .FristSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 2.5rem;
+        }
+
+        .rightSection img {
+
+            width: 120%;
+        }
+
+        .name {
+            color: rgb(178, 104, 247)
+        }
+
+        #element {
+            color: rgb(178, 104, 247)
+        }
+
+        .hr1 {
+            border: 0;
+            background: rgb(178, 104, 247);
+            height: 1px;
+            margin: 40px 80px;
+        }
+
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .grey-text {
+            color: gray;
+        }
+
+        .secondsection h1 {
+            font-size: 1.9rem;
+
+        }
+
+        .box {
+            background: white;
+            width: 77vw;
+            height: 2px;
+            margin: 50px 0;
+            display: flex;
+        }
+
+        .verticle {
+            height: 80px;
+            width: 1px;
+            background-color: white;
+            margin: 0 150px;
+        }
+
+        .verticle2 {
+            height: 80px;
+            width: 1px;
+            background-color: white;
+            margin: 0 122px;
+        }
+
+        .img2 {
+            width: 40px;
+            position: relative;
+            top: -40px;
+            left: -20px;
+        }
+
+        .verticle-title {
+            position: relative;
+            top: 75px;
+            width: 280px;
+            margin-left: -90px;
+        }
+
+        .verticle-title2 {
+            position: relative;
+            top: 75px;
+            width: 280px;
+            margin-left: -59px;
+        }
+
+        .verticle-desc {
+            position: relative;
+            top: 85px;
+            width: 230px;
+            color: gray;
+            font-size: 0.5rem;
+            margin-left: -90px;
+        }
+
+        footer {
+            background-color: rgb(41, 41, 167);
+            height: 220px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        .footer-ul {
+            list-style: none;
+
+        }
+
+        .footer-ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .frist-footer {
+            font-size: 1.0rem;
+        }
+
+        .right-foorter {
+            text-align: center;
+            margin-top: 27px;
+            font-size: 12px;
+            color: gray;
+        }
+
+        .third-section {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+            align-items: center;
+            margin: 50px 117px;
+        }
+
+        .box2 {
+            background: white;
+            width: 77vw;
+            height: 2px;
+            margin: 50px 139px;
+            display: flex;
+        }
+
+        .thirdsech {
+            font-size: 1.9rem;
+        }
+
+        .sectionforth {
+            max-width: 80vw;
+            margin: auto;
+            height: 100vh;
+            align-items: center;
+            margin: 50px 117px;
+        }
+
+        .sectionforth h1 {
+            font-size: 1.9rem;
+
+        }
+
+        .about1 {
+            display: flex;
+
+        }
+
+        .aboutme {
+            width: 35%;
+            background-color: skyblue;
+            padding: 15px;
+            margin: 35px;
+            border: 2px solid white;
+            font-size: 14px;
+            border-radius: 41px;
+            height: 414px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-me-visual {
+            flex: 1;
+            min-width: 200px;
+
+            /* NEW: Change to vertical stacking */
+            display: flex;
+            flex-direction: column;
+            /* This is the key change! */
+
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* Ensures the text is centered */
+            margin: 268px 0;
+        }
+
+
+        /* --- IMAGE STYLING: Circular and Professional --- */
+        .about-me-visual img {
+            width: 250px;
+            height: 250px;
+
+            /* Makes the image a perfect circle */
+            border-radius: 50%;
+            object-fit: cover;
+
+            /* Simple Border and Shadow */
+            border: 4px solid #4a6fa3;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* --- NEW STYLES FOR THE NAME --- */
+        .profile-name {
+            /* Use the light text color for visibility */
+            color: #f0f0f0;
+            /* Adjust font size and margin to sit nicely below the image */
+            font-size: 1.5em;
+            margin-top: 15px;
+            /* Adds space between image and name */
+            margin-bottom: 0;
+            font-weight: 600;
+            /* Makes the name stand out a bit */
+        }
+
+        .sectionfifth {
+            max-width: 80vw;
+            margin: auto;
+            height: 100vh;
+            align-items: center;
+            margin: 50px 117px;
+        }
+
+        .form {
+            width: 35%;
+            background-color: skyblue;
+            padding: 15px;
+            margin: 35px;
+            border: 2px solid white;
+            font-size: 14px;
+            border-radius: 41px;
+            height: 414px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact1 {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 50px 0;
+        }
+
+
+        .contactme {
+            color: white;
+            font-size: 1rem;
+            margin: 100px 0px;
+        }
+
+        .contactme {
+            flex: 1;
+            /* Allows this box to take up some space */
+            min-width: 200px;
+            color: #444;
+        }
+
+
+        .contactme h3 {
+            font-size: 1em;
+           ;
+            margin: 28px 0;
+    font-weight: normal;
+    color: white;
+        }
+
+
+        /* --- 3. FORM STYLING (.form) --- */
+        .form {
+            flex: 0.7;
+            /* Gives the form more space than the contact info */
+            padding-left: 30px;
+            /* Separator space from contact info */
+            color: #444;
+        }
+
+        .form h2 {
+            /* Style for the "Contact Form" title */
+            color: #444;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        /* Reset default margins for the form element itself */
+        .form form {
+            margin: 0;
+        }
+
+        /* --- 4. INPUT FIELD STYLING (The white boxes) --- */
+        .form input[type="text"],
+        .form input[type="email"],
+        .form textarea {
+            /* White background for the input boxes */
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            /* Added space below the invisible label */
+            margin-bottom: 15px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            color: #333;
+            font-size: 1em;
+        }
+
+        .form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        /* Remove the <br> line break space since we handle spacing with margins */
+        .form br {
+            display: none;
+        }
+
+        /* --- 5. SUBMIT BUTTON STYLING --- */
+        .form input[type="submit"] {
+            /* Base style for the button */
+            background-color: #ddd;
+            color: #333;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: auto;
+            /* Allow the button to size based on its text */
+        }
+
+        .form input[type="submit"]:hover {
+            background-color: #ccc;
+        }
+        .btn{
+            background-color:#490071;
+            color:white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Hassan's portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="FristSection">
+            <div class="leftSection">
+                Hi, My name is <span class="name"> Hassan Amir</span>
+                <div>and I am a</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Vist Github</button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img class="prog1" src="prog1.png" name="programmer">
+            </div>
+
+        </section>
+        <hr class="hr1">
+        <section class="secondsection">
+            <span class="grey-text">What i have done so far</span>
+            <h1>Education</h1>
+            <div class="box">
+                <div class="verticle">
+                    <img src="degree1.png" alt="" class="img2">
+                    <div class="verticle-title">
+                        Bachelor's of engineering, Industrial Information and Technology 2025
+                    </div>
+                    <div class="verticle-desc">
+                        I am currently studying Industrial Information and Technology at LAB University of Applied
+                        Sciences, Finland. My coursework focuses on IT and programming, and I am eager to apply my
+                        skills in a professional setting to contribute effectively while further developing both my
+                        career and academic growth.
+                    </div>
+                </div>
+                <div class="verticle">
+                    <img src="degree1.png" alt="" class="img2">
+                    <div class="verticle-title">
+                        FSc pre-engineer
+                        <span>2021-2023</span>
+                    </div>
+                    <div class="verticle-desc">
+                        I completed my FSc (Pre-Engineering) from Govt. Islamia College, Civil Lines, Lahore, with an A
+                        grade. My studies included Physics, Chemistry, Mathematics, and Computer Science, which
+                        strengthened my analytical thinking and provided me with a strong foundation in engineering
+                        fundamentals.
+                    </div>
+                </div>
+                <div class="verticle">
+                    <img src="degree1.png" alt="" class="img2">
+                    <div class="verticle-title">
+                        Secondary eductaion
+                        <span>2019-2021</span>
+                    </div>
+                    <div class="verticle-desc">
+                        I completed my Secondary School Certificate (Matriculation) from the Unique Group of
+                        Institutions, Lahore, with an A+ grade. During my studies, I focused on Physics, Chemistry,
+                        Biology, and Mathematics, which helped me develop a solid foundation in science and enhanced my
+                        problem-solving abilities.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="third-section">
+            <h1 class="thirdsech">Services I offer</h1>
+            <div class="box">
+                <div class="verticle2">
+                    <img src="html.png" alt="" class="img2">
+                    <div class="verticle-title2">
+                        Web Development
+                    </div>
+                    <div class="verticle-desc">
+                        I design and develop responsive, user-friendly websites using HTML, CSS, and JavaScript,
+                        ensuring smooth functionality across devices and browsers. My work focuses on creating visually
+                        appealing interfaces tailored to client needs while enhancing user experience. I emphasize
+                        performance optimization, accessibility, and clean coding practices, collaborating with clients
+                        and teams to deliver functional, modern, and impactful web solutions.
+                    </div>
+                </div>
+                <div class="verticle2">
+                    <img src="python.png" alt="" class="img2">
+                    <div class="verticle-title2">
+                        Python Development
+                    </div>
+                    <div class="verticle-desc">
+                        I develop applications using Python, applying my skills in web development fundamentals, data
+                        analysis, and automation scripts to create efficient and reliable solutions. I focus on writing
+                        clean, well-structured code while ensuring functionality, performance, and usability. By
+                        continuously expanding my knowledge and refining my techniques, I aim to build applications that
+                        are both scalable and adaptable to a wide range of real-world challenges.
+                    </div>
+                </div>
+                <div class="verticle2">
+                    <img src="graphic.png" alt="" class="img2">
+                    <div class="verticle-title2">
+                        Graphic Design
+                    </div>
+                    <div class="verticle-desc">
+                        I design visually appealing graphics for branding, marketing materials, and social media, using
+                        tools such as Adobe Photoshop and Illustrator. My work focuses on creating designs that
+                        effectively communicate a brand’s message and engage the target audience. I pay attention to
+                        aesthetics, color theory, and layout to produce professional and impactful visuals that enhance
+                        brand identity and support marketing goals.
+                    </div>
+                </div>
+                <div class="verticle2">
+                    <img src="videoe.png" alt="" class="img2">
+                    <div class="verticle-title2">
+                        Video Editing
+                    </div>
+                    <div class="verticle-desc">
+                        ICreate engaging video content for various platforms using software such as Adobe Premiere Pro
+                        and Final Cut Pro. My work involves editing footage, adding effects, and optimizing videos to
+                        capture audience attention and convey messages effectively. I focus on storytelling, pacing, and
+                        visual appeal to produce professional-quality videos that enhance brand presence and maximize
+                        viewer engagement.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sectionforth">
+            <h1> About Me</h1>
+
+            <div class="about1 box">
+                <div class="aboutme">
+                    Hello! I'm Hassan Amir, a highly motivated student of Industrial Information and Technology at LAB
+                    University of Applied Sciences, Uusimaa, Helsinki Metropolitan Area.
+                    ​With a robust academic background in science and engineering, I am transitioning those analytical
+                    skills into the world of software. I possess basic proficiency in HTML and CSS for front-end web
+                    development and am diligently developing my programming abilities in Python.
+                    ​ What sets me apart is my significant experience as a freelance professional. As a successful video
+                    editor on Fiverr, I have a proven ability to manage projects end-to-end, meet deadlines, and provide
+                    excellent service to international clients. This has sharpened my cross-cultural communication,
+                    leadership, and independent project handling skills. I'm seeking a part-time opportunity to gain
+                    hands-on experience and apply my developing technical skills in a professional setting
+                </div>
+                <div class="about-me-visual">
+                    <img src="Hassanse.jpg" alt="Hassan Amir Profile Picture">
+                    <h2 class="profile-name">Hassan Amir</h2> 
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="sectionfifth">
+            <h1> Contact Me</h1>
+
+            <div class="contact1 box">
+                <div class="contactme">
+                    <h3>Email: hassanamir1122pm"gmail.com</h3>
+                    <h3>Phone: +358449527076</h3>
+                </div>
+                <div class="form">
+                    <form>
+
+                        <h2>Contact Form</h2>
+                        <input type="text" id="fname" name="fname" placeholder="Full name"><br>
+                        <input type="email" id="email" name="email" placeholder="Email"><br>
+                        <textarea id="message" name="message" placeholder="Write message here" rows="5"
+                            cols="40"></textarea><br>
+                        <input type="submit" value="Submit">
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <div class="footer">
+                <div class="frist-footer">
+                    Hassan's Portfolio
+                </div>
+                <div class="second-footer">
+                    <ul class="footer-ul">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/">Services</a></li>
+                        <li><a href="/">About</a></li>
+                        <li><a href="/">Contact Me</a></li>
+                    </ul>
+                </div>
+                <div class="third-footer">
+                    <ul class="footer-ul">
+                        <li><a href="/">Facebook</a></li>
+                        <li><a href="/">Instagram</a></li>
+                        <li><a href="/">Linkedin</a></li>
+                        <li><a href="/">Twitter</a></li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+            <div class="right-foorter">
+                Copyright © 2025 Hassan Amir. All rights reserved.
+            </div>
+        </footer>
+
+
+
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web developer', 'Python Developer', 'Graphic Designer', 'Video Editor', 'Freelancer'],
+            loop: true,
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
