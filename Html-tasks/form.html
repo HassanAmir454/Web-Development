@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+
+    <body> 
+        <form> 
+            <fieldset>
+                 <legend>Contact information:</legend>
+                 <input type="text" id ="fname" name="fname" placeholder="Frist name"><br>
+                 <input type="text" id="lname" name="lname" placeholder="Last name"><br>
+                 <input type="email" id="email" name="email" placeholder="Email"><br>
+                 <input type="Telephone" id="Telephone" name="Telephone" placeholder="Telephone"><br><br>
+                 <label for="contact method">Preferred contact method:</label><br>
+                 <input type="checkbox" id="contact method" name="contact method" >Email<br>
+                 <input type="checkbox" id="contact method" name="contact method" >Telephone<br><br>
+            </fieldset>
+            <fieldset>
+                <legend>Feedback:</legend>
+                <input type="text" id="message" name="message" placeholder="Message subject"><br>
+                <textarea id="message" name="message" rows="10" cols="50"></textarea><br>
+                <label for="submit">Attach a file:</label>
+                <input type="button" id="submit" name="submit" value="Browse...">No file selected<br>
+                <hr>
+                <input type="button" value="send">
+
+            </fieldset>  
+        </form>
+    </body>
+
+</html>
