@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox/Grid</title>
+    <style> 
+    .Container{
+        
+        width: 80vw;
+    height: 100vh;
+    background-color: #2196F3;
+    display: grid
+;
+    grid-template-areas:
+        "nav nav nav"
+        "menu content other"
+        "footer back end";
+    padding: 10px;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 102px;
+    margin-top: 76px;
+        
+    }
+    .item1{
+        grid-area: nav;
+    background-color: skyblue;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 19px;
+    font-weight: 500;
+     
+    }
+    .item2{
+        grid-area: menu;
+        background-color: skyblue;
+        justify-content: center;
+
+    }
+    .item3{
+        grid-area: content;
+        background-color: skyblue;
+        justify-content: center;
+       
+
+    }
+    .item4{
+        grid-area: other;
+        background-color: skyblue;
+        justify-items: center;
+       
+        
+    }
+    .item5{
+        grid-area: footer;
+        background-color: skyblue;
+       
+        
+    }
+    .item6{
+        grid-area: back;
+        background-color: skyblue;
+       
+        
+    }
+    .item7{
+        grid-area: end;
+        background-color: skyblue;
+       
+        
+    }
+    img{
+        width: 150px;
+    height: 150px;
+    margin-left: 92px;
+    margin-top: 42px;
+    }
+    h2{
+        color:black;
+        padding:2px;
+    }
+    p{
+        color:black;
+        padding: 10px
+    }
+    .h1h{
+        color:black;
+    color: black;
+    margin-left: 118px;
+}
+    .h13{
+      margin-left: 156px;
+    }
+    .h12{
+        margin-left: 135px;
+    }
+    .h22{
+       margin-left: 39px;
+    }
+    .h23{
+            margin-left: 110px;
+    }
+    body{
+        background-color: rgb(14, 14, 40);
+
+    }
+     nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(41, 41, 167);
+            height: 80px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+
+        }
+
+        nav ul li a:hover {
+            color: rgb(178, 104, 247);
+            font-size: 1.03rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Navigation Bar</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="Container">
+        <div class="items item1">Front-End Development</div>
+        <div class="items item2">
+            <img src="images/html5.png" alt="html image" class="img">
+        </div>
+        <div class="items item3">
+            <img src="images/css3.png" alt="html image" class="img2">
+        </div>
+        <div class="items item4">
+            <img src="images/java.png" alt="html image" class="img3">
+        </div>
+        <div class="items item5">
+            <h1 class="h1h">HTML</h1>
+            <h2> (HyperText Markup Language)</h2>
+            <p>HTML is the standard markup language used to create the structure of web pages. It defines elements like headings, paragraphs, links, images, and forms, making it the backbone of any website. Without HTML, a webpage would have no content or layout.</p>
+        </div>
+        <div class="items item6">
+            <h1 class="h12">CSS</h1>
+            <h2 class="h22">(Cascading Style Sheets)</h2>
+            <p>CSS is used to style and design web pages by controlling layout, colors, fonts, and spacing. It works together with HTML to make pages visually appealing and responsive. With features like Flexbox and Grid, CSS ensures that web content looks good on all screen sizes.</p>
+        </div>
+        <div class="items item7">
+            <h1 class="h13">JS</h1>
+            <h2 class="h23">(JavaScript)</h2>
+            <p>JavaScript is a scripting language that adds interactivity and dynamic behavior to web pages. It allows developers to create features like image sliders, form validation, dropdown menus, and animations. Together with HTML and CSS, JavaScript forms the core technologies of modern frontend development.</p>
+        </div>
+    </div>
+</body>
+</html>
