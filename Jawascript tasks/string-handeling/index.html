@@ -3,38 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
+    <title>String Handeling</title>
 
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section id="home">
-            <h2>Home Section</h2>
-            <p>This is where your main content goes.</p>
-        </section>
+    <script>
+        // Make a program that asks the user for a word or phrase. As a result, the program tells you how many L letters the input contained.
+ 
 
-        <section id="about">
-            <h2>About Section</h2>
-            <p>Write about yourself or your project here.</p>
-        </section>
-    </main>
+word = prompt("Enter word to count 'l' character in it: ")
+let count = 0;
+for (let i of word) {
+    if (i == "l") {
+        count++
+    }
+}
+console.log(word, "contains",count,"x L characters")
 
-    <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
-    </footer>
 
-    <!-- Link to external JavaScript -->
-    <script src="stringhandeling.js"></script>
+// Make a program that asks the user for a word or phrase. As a result, the program tells you how many vowels the input contained.
+// Vowels are (aeiouy[åäö])
+
+
+let word_2 = prompt("Enter word to count vowels in it: ")
+let vowel_c = 0;
+for (let i of word_2) {
+    if (i == "a" || i == "e" || i == "i" || i == "o" || i == "u") {
+        vowel_c++
+    }
+}
+console.log(word_2, "contains",vowel_c,"vowels")
+
+
+// Make a program that asks the user for a word or phrase. As a result, the program tells you how is input palindrome or not.
+
+
+let word_3 = prompt("Enter word to check is it palindrome: ")
+let rev = ""
+for (let i = word_3.length - 1;i >= 0; i-- ) {
+    rev += word_3[i]
+}
+if (rev.toLowerCase() == word_3.toLowerCase()) {
+    console.log(word_3, "is palindrome")
+} else {
+    console.log(word_3, "is not a palindrome")
+}
+    </script>
 </body>
 </html>
