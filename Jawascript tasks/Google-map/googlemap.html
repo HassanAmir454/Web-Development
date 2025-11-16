@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps Search</title>
+</head>
+<body>
+    <div>
+        <h1>Goggle Maps Search</h1>
+        <iframe id="map"
+         src="https://www.google.com/maps?q=Yliopistonkatu36Lappeenranta&output=embed"
+          width="50%" height="300px" frameBorder="0"></iframe>
+    </div>
+    <div>
+        <h3>Search for a place</h3>
+        <label for="street">Street name: </label>
+        <input type="text" id="street" placeholder="Type Street name">
+        <label for="city">City: </label>
+        <input type="text" id="city" placeholder="Type City">
+        <button id="search">Search</button>
+    </div>
+
+
+
+
+<script>
+
+const street = document.getElementById("street");
+const city = document.getElementById("city");
+const search = document.getElementById("search");
+
+search.addEventListener('click', function(){
+    const adress1 = street.value
+    const adress2 = city.value
+    document.getElementById("map").src = "https://www.google.com/maps?q="+adress1+adress2+"&output=embed"
+
+
+})
+
+</script>
+</body>
+</html>
