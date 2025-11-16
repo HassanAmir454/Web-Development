@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calculator</title>
+</head>
+<body>
+    <!-- Calculator 1 -->
+    <div>
+        <h1>Calculator with text box and dropdown list</h1>
+        <div>
+            <input type="number" id="num1" placeholder="Frist number">
+            <select name = "operator" id = "operator-1">
+                <option value = "+">+</option>
+                <option value = "-">-</option>
+                <option value = "*">*</option>
+                <option value = "/">/</option>
+            </select>
+            <input type="number" id="num2" placeholder="second number">
+            <button id="equal-1">=</button>
+            <input type="number" id="result" placeholder="Answer">
+        </div>
+    </div>
+    <!-- Calculator 2 -->
+    <div>
+        <h1>Calculator with text box and option buttons</h1>
+        <div>
+            <input type="number" id="num1-2" placeholder="Frist number"><br>
+            <input type="radio" name="operator2" id="+" value="+">
+            <label for="+">Addition</label><br>
+            <input type="radio" name="operator2" id="-" value="-">
+            <label for="-">Subtraction</label><br>
+            <input type="radio" name="operator2" id="*" value="*">
+            <label for="*">Multiplication</label><br>
+            <input type="radio" name="operator2" id="/" value="/">
+            <label for="/">Division</label><br>
+            <input type="number" id="num2-2" placeholder="second number">
+            <button id="equal-2">=</button>
+            <input type="number" id="result-2" placeholder="Answer">
+        </div>
+    </div>
+
+    <!-- Calculator 3 -->
+    <div>
+        <h1>Calculator with text box and Increment/Decrement buttons</h1>
+        <div>
+            <button class="Increment">▲</button>
+            <input type="number" id="num1-3" placeholder="Frist number">
+            <button class="Decrement">▼</button>
+            <select name = "operator3" id = "operator-3">
+                <option value = "+">+</option>
+                <option value = "-">-</option>
+                <option value = "*">*</option>
+                <option value = "/">/</option>
+            </select>
+            <button class="Increment">▲</button>
+            <input type="number" id="num2-3" placeholder="second number">
+            <button class="Decrement">▼</button>
+            <button id="equal-3">=</button>
+            <input type="number" id="result-3" placeholder="Answer">
+        </div>
+    </div>
+     
+
+
+
+
+
+
+
+
+
+
+
+<script>
+const num1 = document.getElementById("num1")
+const num2 = document.getElementById("num2")
+const operator = document.getElementById("operator-1")
+const equalBtn = document.getElementById("equal-1")
+const resultBox = document.getElementById("result")
+
+equalBtn.addEventListener('click', function() {
+    const a = Number(num1.value);
+    const b = Number(num2.value);
+    const op = operator.value
+    let result;
+
+    if (op === "+") result = a + b;
+    else if (op === "-") result = a - b;
+    else if (op === "*") result = a * b;
+    else if (op === "/") {
+        if (b == 0) result = 'Error, division by 0.';
+        else result = a / b;
+    }
+
+    resultBox.value = result;
+
+});
+
+
+// for calculator 2
+const num1_2 = document.getElementById("num1-2")
+const num2_2 = document.getElementById("num2-2")
+const equal2Btn = document.getElementById("equal-2")
+const resultBox2 = document.getElementById("result-2")
+
+equal2Btn.addEventListener('click', function(){
+    const aa = Number(num1_2.value);
+    const bb = Number(num2_2.value);
+    const selectOp = document.querySelector('input[name="operator2"]:checked');
+    if (!selectOp) {
+        alert("Please select an operator");
+        return;
+    }
+    let result2;
+
+    if (selectOp.value === "+") result2 = aa + bb;
+    else if (selectOp.value === "-") result2 = aa - bb;
+    else if (selectOp.value === "*") result2 = aa * bb;
+    else if (selectOp.value === "/") {
+        if (bb == 0) result2 = 'Error, division by 0';
+        else result2 = aa / bb
+    }
+    resultBox2.value = result2;
+    
+})
+
+//for calculator 3
+ const num1_3 = document.getElementById("num1-3");
+  const num2_3 = document.getElementById("num2-3");
+  const operator3 = document.getElementById("operator-3");
+  const equal3Btn = document.getElementById("equal-3");
+  const result3 = document.getElementById("result-3");
+
+  // Get all increment/decrement buttons
+  const incButtons = document.querySelectorAll(".Increment");
+  const decButtons = document.querySelectorAll(".Decrement");
+
+    // Increment button functionality
+  incButtons.forEach((btn, index) => {
+      btn.addEventListener('click', function() {
+          if(index === 0) num1_3.value = Number(num1_3.value || 0) + 1;
+          else num2_3.value = Number(num2_3.value || 0) + 1;
+      });
+  });
+
+  // Decrement button functionality
+  decButtons.forEach((btn, index) => {
+      btn.addEventListener('click', function() {
+          if(index === 0) num1_3.value = Number(num1_3.value || 0) - 1;
+          else num2_3.value = Number(num2_3.value || 0) - 1;
+      });
+  });
+
+  equal3Btn.addEventListener('click', function() {
+      const a = Number(num1_3.value);
+      const b = Number(num2_3.value);
+      const op = operator3.value;
+      let res;
+
+      if(op === "+") res = a + b;
+      else if(op === "-") res = a - b;
+      else if(op === "*") res = a * b;
+      else if(op === "/") res = (b === 0) ? "Error: division by 0" : a / b;
+
+      result3.value = res;
+  });
+
+</script>
+</body>
+</html>

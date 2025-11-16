@@ -15,7 +15,7 @@ console.log(word, "contains",count,"x L characters")
 // Vowels are (aeiouy[åäö])
 
 
-word_2 = prompt("Enter word: ")
+let word_2 = prompt("Enter word: ")
 let vowel_c = 0;
 for (let i of word_2) {
     if (i == "a" || i == "e" || i == "i" || i == "o" || i == "u") {
